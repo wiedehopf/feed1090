@@ -1,0 +1,9 @@
+#options for feed1090
+#
+SOURCES="--net-connector 127.0.0.1,30005,beast_in --net-connector 127.0.0.1,30157,beast_in"
+TARGETS="--net-connector sky.bup.mx,54004,beast_reduce_out"
+
+RECEIVER_OPTIONS="--quiet --net-only --net-beast-reduce-interval 0.2 --forward-mlat"
+DECODER_OPTIONS="--max-range 360"
+NET_OPTIONS="--net --net-heartbeat 60 --net-ro-size 1000 --net-ro-interval 0.1"
+JSON_OPTIONS="--json-location-accuracy 2 --write-json /run/feed1090"

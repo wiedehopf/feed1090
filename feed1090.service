@@ -1,0 +1,20 @@
+
+[Unit]
+Description=feed1090-dump - feed1090 readsb instance
+Documentation=https://github.com/wiedehopf/feed1090
+Wants=network.target
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/default/feed1090
+User=feed1090
+RuntimeDirectory=feed1090
+RuntimeDirectoryMode=0755
+ExecStart=/usr/local/share/feed1090/bin/readsb $RECEIVER_OPTIONS $DECODER_OPTIONS $NET_OPTIONS $JSON_OPTIONS $SOURCES $TARGETS
+Type=simple
+Restart=on-failure
+RestartSec=30
+SyslogIdentifier=feed1090
+
+[Install]
+WantedBy=default.target
