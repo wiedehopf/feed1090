@@ -16,7 +16,7 @@ function aptInstall() {
     fi
 }
 
-aptInstall git gcc make libncurses5-dev zlib1g-dev zlib1g wget
+aptInstall git gcc make libncurses5-dev zlib1g-dev zlib1g wget libzstd-dev
 
 function getGIT() {
     # getGIT $REPO $BRANCH $TARGET (directory)
