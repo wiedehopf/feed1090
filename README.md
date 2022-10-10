@@ -22,7 +22,7 @@ Then restart feed1090:
 sudo systemctl restart feed1090
 ```
 
-### Deinstallation:
+### Uninstallation:
 ```
 sudo bash -c "$(wget -q -O - https://raw.githubusercontent.com/wiedehopf/feed1090/master/uninstall.sh)"
 ```
